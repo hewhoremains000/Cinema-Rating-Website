@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Movie Details</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="movie-page">
+
+  <button onclick="goBack()" class="back-btn">⬅ Back</button>
+
+  <div id="movie-details" class="movie-detail-card"></div>
+
+  <div id="review-section" class="review-card">
+    <h3>Your Review</h3>
+
+    <div id="stars">
+      <span onclick="selectStar(1)">★</span>
+      <span onclick="selectStar(2)">★</span>
+      <span onclick="selectStar(3)">★</span>
+      <span onclick="selectStar(4)">★</span>
+      <span onclick="selectStar(5)">★</span>
+    </div>
+
+    <textarea id="review-text" placeholder="Write your review"></textarea>
+    <button onclick="submitReview()">Submit Review</button>
+  </div>
+
+  <div id="all-reviews" class="review-list">
+    <h3>All Reviews</h3>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

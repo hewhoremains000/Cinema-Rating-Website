@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CineRate</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>🎬 CineRate</h1>
+
+<!-- AUTH -->
+<div id="auth-container">
+  <div id="login-box" class="box">
+    <h2>Login</h2>
+    <input id="login-username" placeholder="Username">
+    <input id="login-password" type="password" placeholder="Password">
+    <button onclick="login()">Login</button>
+    <p class="switch-text">New here?
+      <span onclick="showSignup()">Sign Up</span>
+    </p>
+  </div>
+
+  <div id="signup-box" class="box" style="display:none;">
+    <h2>Sign Up</h2>
+    <input id="signup-username" placeholder="Username">
+    <input id="signup-password" type="password" placeholder="Password">
+    <button onclick="signup()">Create Account</button>
+    <p class="switch-text">Already registered?
+      <span onclick="showLogin()">Login</span>
+    </p>
+  </div>
+</div>
+
+<!-- DASHBOARD -->
+<div id="dashboard" style="display:none;">
+  <div class="top-bar">
+    <div>
+      <h2>Welcome, <span id="current-user"></span></h2>
+      <p class="subtitle">Discover, rate & review movies</p>
+    </div>
+    <button onclick="logout()" class="logout-btn">Logout</button>
+  </div>
+
+  <div class="search-container">
+    <input id="search-input" placeholder="Search movies..." onkeyup="searchMovies()">
+  </div>
+
+  <div id="movies" class="movie-grid"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
